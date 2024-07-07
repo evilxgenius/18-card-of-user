@@ -1,0 +1,77 @@
+$main-padding: 30px;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  height: 100dvh;
+  background-color: black;
+  overflow: auto;
+}
+
+.form, .info {
+  width: 400px;
+  border-radius: 15px;
+  padding: $main-padding;
+  background-color: lightgray;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 15px;
+
+  &__label {
+    align-self: center;
+    justify-self: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__control {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    padding-top: 15px;
+  }
+
+  &__submit,
+  &__reset {
+    border-radius: 5px;
+    padding: 8px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  &__submit:hover,
+  &__reset:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+
+  &__submit {
+    background-color: black;
+  }
+
+  &__reset {
+    background-color: gray;
+  }
+}
+
+.info {
+  &__list {
+    padding-left: $main-padding;
+  }
+}
